@@ -2,7 +2,6 @@ import express, { Express } from "express";
 
 import bullBoardAdapter from "./config/bullBoardConfig";
 import serverConfig from "./config/serverConfig";
-import sampleQueueProducer from "./producers/sampleQueueProducer";
 import apiRouter from "./routes";
 import SampleWorker from "./workers/SampleWorker";
 
@@ -19,9 +18,3 @@ console.log(`Bullboard Dashboard Running on: http://localhost:${serverConfig.POR
 
 SampleWorker('SampleQueue');
 
-sampleQueueProducer('SampleJob', {
-    name: "Dhruv N",
-    company: "Pryzm",
-    position: "Junior Dev",
-    location: "Remote | Mumbai | Maharashtra"
-});
